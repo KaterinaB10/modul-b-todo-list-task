@@ -1,0 +1,200 @@
+/* 
+font-family: 'Barlow', sans-serif;
+font-family: 'Inder', sans-serif;
+font-family: 'Lilita One', sans-serif; ---> main fonts
+#101010, #F4F0E5, #F0D76B, #191919 ---> main colors
+*/
+
+/*
+Layout
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inder", sans-serif;
+  color: #101010;
+  background-color: #101010;
+}
+
+.todo-container {
+  max-width: 100%;
+  max-height: 100vh;
+  padding: 2em 1.5em;
+}
+
+/*
+Typography
+*/
+
+h1 {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f0d76b;
+}
+
+label {
+  margin-left: 0.5em;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #f4f0e5;
+}
+
+.row-2 p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #f4f0e5;
+  text-align: right;
+}
+
+/*
+Form
+*/
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.6em 1em;
+}
+
+.input-box {
+  /* width: 60%; */
+  padding: 0.5em 0.8em;
+  background-color: #191919;
+  border-radius: 60px;
+  border: 1px solid #f0d76b;
+  outline: none;
+  color: #f0d76b;
+  font-weight: 600;
+}
+
+.input-box::placeholder {
+  display: none;
+}
+
+.add-button {
+  padding: 0.5em 0.5em;
+  border-radius: 60px;
+  background-color: #f0d76b;
+  border: none;
+  display: flex;
+}
+
+/*
+Tasks container
+*/
+
+.tasks-section {
+  margin: 0.6em 1em;
+}
+
+#task {
+  border-top: 1.5px solid #f0d76b;
+}
+
+.row-1,
+.indicator-and-title,
+.control-btns {
+  display: flex;
+}
+
+.row-1 {
+  justify-content: space-between;
+  padding-top: 0.5em;
+}
+
+.checkbox {
+  opacity: 0;
+}
+
+.taskLabel {
+  position: relative;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.taskLabel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -32px;
+  width: 20px;
+  height: 20px;
+  border-radius: 60px;
+  border: 1.5px solid #f0d76b;
+}
+
+.taskLabel::after {
+  content: "";
+  position: absolute;
+  top: 5.5px;
+  left: -26.5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 60px;
+  background-color: #f0d76b;
+  transition: 0.2s ease;
+}
+
+.checkbox:not(:checked) + .taskLabel::after {
+  opacity: 0;
+}
+
+.checkbox:checked + .taskLabel {
+  text-decoration: line-through;
+}
+
+.control-btns button {
+  background: none;
+  padding-left: 0.7em;
+  border: none;
+  display: flex;
+}
+
+.row-2 {
+  padding-bottom: 0.5em;
+}
+
+/* Maybe I will need it:
+
+
+.first-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.second-row {
+  display: flex;
+  font-size: 0.5rem;
+}
+
+.second-row p {
+  margin-left: 2em;
+}
+
+ul li {
+  list-style: none;
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+#task-complete-mark {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 1em;
+  border: 2px solid #101010;
+  border-radius: 100px;
+} */

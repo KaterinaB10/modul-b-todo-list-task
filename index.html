@@ -4,25 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/overrides.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Inder&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="styles/overrides.css" />
     <link rel="stylesheet" href="styles/palettes.css" />
-    <link rel="stylesheet" href="styles/classes.css" />
+    <link rel="stylesheet" href="styles/classes.css" /> -->
+    <link rel="stylesheet" href="./styles/styles.css" />
 
     <script type="module" src="main.js"></script>
 
     <title>Todo List</title>
   </head>
   <body class="min-h-screen flex flex-col">
-    <header class="bg-primary text-secondary">
-      <h1 class="text-center">Todo List</h1>
-    </header>
+    <div class="todo-container">
+      <!-- Header of todo-list -->
+      <h1>My today’s tasks</h1>
+      <div class="form-field">
+        <input class="input-box" id="input-box" type="text" />
+        <button class="add-button" id="add-task-btn">
+          <img src="./Images/plus-icon.png" alt="Icon that shows plus sign" />
+        </button>
+      </div>
 
-    <main class="grow">
-      <!-- ??? -->
-    </main>
-
-    <footer class="bg-primary text-secondary">
-      <p class="text-center">Your name, and maybe some links 😉</p>
-    </footer>
+      <div class="tasks-section">
+        <ul id="display-task">
+          <!-- Will be used in JS -->
+          <!-- <li id="task">
+            <div class="row-1">
+              <div class="indicator-and-title">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="task-checkbox"
+                  class="checkbox"
+                />
+                <label for="task-checkbox" class="taskLabel">Title</label>
+              </div>
+              <div class="control-btns">
+                <button class="editBtn">
+                  <img src="./Images/edit-icon.png" alt="" />
+                </button>
+                <button class="deleteBtn">
+                  <img src="./Images/close-icon.png" alt="" />
+                </button>
+              </div>
+            </div>
+            <div class="row-2">
+              <p>updated at:</p>
+            </div>
+          </li> -->
+          <!-- Will be used in JS -->
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
