@@ -1,18 +1,10 @@
+/*Collection of all of variables and functions associated with Todo List*/
+
 /**
  * Returns all the Todoes in a list
  *
  * @returns {Todo}
  */
-
-/**
- * Creates a new Todo based on the passed
- * in data
- *
- * @param {TodoCreationInfo} data
- * @returns {Todo}
- */
-
-/*Collection of all of variables and functions associated with Todo List*/
 
 // The list of all of our Todoes
 const todoes = [];
@@ -22,6 +14,14 @@ export function getAllTodoes() {
   return todoes;
 }
 
+/**
+ * Creates a new Todo based on the passed
+ * in data
+ *
+ * @param {TodoCreationInfo} data
+ * @returns {Todo}
+ */
+
 // I creating a function for adding a new todo item (task) --> data from createTaskFunction
 // I have to create this function for write which things in data will be changed + adding max-length
 export function addTask(title) {
@@ -29,7 +29,7 @@ export function addTask(title) {
   const newTask = {
     id: createUniqueId(),
     title: title,
-    LastUpdatedAt: new Intl.RelativeTimeFormat("en"),
+    LastUpdatedAt: new Date().toISOString(),
   };
 
   // todoes.push(newTask);

@@ -1,9 +1,4 @@
 /**
- * Takes a Todo Item and generates a HTML Element for that Todo
- * You are free to make wathever HTLM you feel necessary,
- * But it should be semantically meaningful and
- * look decent
- *
  * @param {Todo} data
  * @returns {HTMLElement}
  */
@@ -32,7 +27,7 @@ const template = `<li id="task">
               </div>
             </div>
             <div class="row-2">
-              <p>Last updated at:</p>
+              <p>Last updated:</p>
             </div>
           </li>
 `;
@@ -52,7 +47,7 @@ export function createNewTask(data) {
   const deleteBtn = wrapper.querySelector(".deleteBtn");
 
   const subtitle = wrapper.querySelector("p");
-  subtitle.textContent = data.time;
+  subtitle.textContent = data.subtitle;
 
   return wrapper;
 }
