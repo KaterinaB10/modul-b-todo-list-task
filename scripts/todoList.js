@@ -29,10 +29,8 @@ export function addTask(title) {
   const newTask = {
     id: createUniqueId(),
     title: title,
-    LastUpdatedAt: new Date().toLocaleDateString(),
+    LastUpdatedAt: "Last updated: " + new Date().toLocaleDateString(),
   };
-
-  // todoes.push(newTask);
 
   // A function for regulation quantity of items in the list
   if (todoes.length < 5) {

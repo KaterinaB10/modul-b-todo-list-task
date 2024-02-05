@@ -11,6 +11,7 @@ import { createNewTask } from "./scripts/createTodoElement.js";
 // Read user input
 const userInput = document.querySelector("#input-box");
 const addButton = document.querySelector("#add-task-btn");
+const deleteButton = document.querySelector(".deleteBtn");
 
 addButton.addEventListener("click", () => {
   // 1. Read text input
@@ -21,6 +22,7 @@ addButton.addEventListener("click", () => {
   if (title === "") {
     // If the input is empty return
     alert("Please write something.");
+    console.log("You should write something.");
   }
 
   // 3. Create new todo
@@ -50,7 +52,17 @@ function updateDisplay() {
   for (const data of allTodoes) {
     // Create a new HTML element
     const newElement = createNewTask(data);
+    // const deletedElement = deleteTask(data);
     // Insert the new element into the DOM
     listContainer.appendChild(newElement);
+
+    // Add event delegation for delete buttons
+    listContainer.addEventListener("click", (event) => {
+      if (event.target.classList.contains("deleteBtn")) {
+        console.log("Delete button clicked");
+        event.target.closest("li").remove(); // Remove the closest parent <li> element
+        updateDisplay();
+      }
+    });
   }
 }

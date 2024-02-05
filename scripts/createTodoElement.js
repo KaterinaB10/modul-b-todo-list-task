@@ -42,9 +42,15 @@ export function createNewTask(data) {
   const title = wrapper.querySelector(".taskLabel");
   title.textContent = data.title; //title.textContent because I take title from previouse line "const title ="
 
-  const editBtn = wrapper.querySelector(".editBtn");
+  const editBtn = wrapper.querySelectorAll(".editBtn");
 
-  const deleteBtn = wrapper.querySelector(".deleteBtn");
+  const deleteButton = wrapper.querySelector(".deleteBtn");
+  deleteButton.addEventListener("click", () => {
+    console.log("Delete button clicked");
+    wrapper.remove();
+  });
+
+  // const deleteButtons = document.querySelectorAll(".deleteBtn");
 
   const LastUpdatedAt = wrapper.querySelector("p");
   LastUpdatedAt.textContent = data.LastUpdatedAt;
