@@ -27,6 +27,13 @@ body {
   padding: 2em 1.5em;
 }
 
+@media (min-width: 768px) {
+  .todo-container {
+    margin: 0 auto;
+    max-width: 40%;
+  }
+}
+
 /*
 Typography
 */
@@ -64,7 +71,7 @@ Form
 }
 
 .input-box {
-  /* width: 60%; */
+  width: 85%;
   padding: 0.5em 0.8em;
   background-color: #191919;
   border-radius: 60px;
@@ -72,6 +79,12 @@ Form
   outline: none;
   color: #f0d76b;
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .input-box {
+    width: 90%;
+  }
 }
 
 .input-box::placeholder {
