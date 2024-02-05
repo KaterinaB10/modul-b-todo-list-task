@@ -29,7 +29,7 @@ export function addTask(title) {
   const newTask = {
     id: createUniqueId(),
     title: title,
-    LastUpdatedAt: new Date().toISOString(),
+    LastUpdatedAt: new Date().toLocaleDateString(),
   };
 
   // todoes.push(newTask);

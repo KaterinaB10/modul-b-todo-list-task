@@ -46,8 +46,8 @@ export function createNewTask(data) {
 
   const deleteBtn = wrapper.querySelector(".deleteBtn");
 
-  const subtitle = wrapper.querySelector("p");
-  subtitle.textContent = data.subtitle;
+  const LastUpdatedAt = wrapper.querySelector("p");
+  LastUpdatedAt.textContent = data.LastUpdatedAt;
 
   return wrapper;
 }
